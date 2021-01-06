@@ -33,7 +33,7 @@ public class UserInfoService {
 
 	/** 특정 유저의 정보를 조회하는 로직 */
 	public UserPublic getUser(int seq) {
-		
+		System.out.println("########################");
 		UserInfo user = repository.findById(seq).orElseThrow();
 		
 		//TODO UserPublic으로 변환해서 리턴할 것 
