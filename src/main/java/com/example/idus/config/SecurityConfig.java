@@ -15,7 +15,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable()
 			.authorizeRequests()
-				.antMatchers("/login").permitAll()
+				.antMatchers("/login"
+						,"/swagger-ui.html"
+						,"/h2-console/**"
+						).permitAll()
 				.anyRequest().authenticated()
 			.and()
 			.formLogin()
@@ -28,6 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.logout()
 				.logoutUrl("/doLogout")
 				.logoutSuccessUrl("/login");
+		
+		http.headers().frameOptions().sameOrigin(); 
 	}
 
 	

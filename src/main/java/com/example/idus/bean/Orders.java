@@ -4,6 +4,8 @@ package com.example.idus.bean;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.AccessLevel;
@@ -17,7 +19,7 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
-public class Order {
+public class Orders {
 	
 	@Id
 	String orderNum;

@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.idus.bean.Order;
+import com.example.idus.bean.Orders;
 
-public interface OrderRepository extends JpaRepository<Order, String>{
+public interface OrderRepository extends JpaRepository<Orders, String>{
 
-	List<Order> findAllByUserSeqOrderBySeqDesc(int userSeq);
+	List<Orders> findAllByUserSeqOrderByUserSeqDesc(int userSeq);
 	
 }
