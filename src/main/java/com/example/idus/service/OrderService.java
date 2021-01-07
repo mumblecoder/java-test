@@ -18,9 +18,16 @@ public class OrderService {
 
 	/** 특정 유저의 주문내역을 조회하는 로직 */
 	public List<OrderPublic> getOrderListByUser(int userSeq) {
-		List<Orders> list = repository.findAllByUserSeqOrderByUserSeqDesc(userSeq);
+		List<Orders> list = repository.findAllByUserSeqOrderByOrderDtDesc(userSeq);
 		
 		// TODO 객체 변환해서 리턴하자 
+		
+		return null;
+	}
+
+	public Object post(Orders order) {
+		
+		
 		
 		return null;
 	}

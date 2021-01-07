@@ -8,6 +8,6 @@ import com.example.idus.bean.Orders;
 
 public interface OrderRepository extends JpaRepository<Orders, String>{
 
-	List<Orders> findAllByUserSeqOrderByUserSeqDesc(int userSeq);
+	List<Orders> findAllByUserSeqOrderByOrderDtDesc(int userSeq);
 	
 }

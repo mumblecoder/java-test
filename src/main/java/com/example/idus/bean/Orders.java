@@ -52,7 +52,6 @@ public class Orders {
 		Integer page;
 		/** 한 페이지에 노출할 목록 수 */
 		Integer size;
-
 	}
 	
 }
